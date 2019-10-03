@@ -1,32 +1,42 @@
 package com.example.miprimerapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
+    private EditText et1, et2;
+    private TextView tv1;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int matematicas = 5;
-        int quimica = 5;
-        int fisica = 5;
-        int promedio = 0;
-        promedio = (matematicas + quimica + fisica) / 3;
+        et1 = (EditText)findViewById(R.id.txt_num1);
+        et2 = (EditText)findViewById(R.id.txt_num2);
+        tv1 = (TextView)findViewById(R.id.txt_resultafo);
+    }
 
-        if(promedio >= 6)
-        {
-            Toast.makeText(this, "Aprobado", Toast.LENGTH_SHORT).show();
-        }
-        else if(promedio < 6)
-        {
-            Toast.makeText(this, "Desaprobadooo", Toast.LENGTH_LONG).show();
-        }
 
+    //Este metodo hace la suma
+    public void Sumar(View view)
+    {
+        String valor1 = et1.getText().toString();
+        String valor2 = et2.getText().toString();
+
+        int num1 = Integer.parseInt(valor1);
+        int num2 = Integer.parseInt((valor2));
+
+        int suma = num1 + num2;
+
+        String restul = String.valueOf(suma);
+        tv1.setText("Resultado: " + restul);
     }
 
     /*
