@@ -58,6 +58,20 @@
             android:layout_height="wrap_content"
             android:text="@string/rb2"
             android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rb_multiplicar"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rb3"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rb_dividir"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rb4"
+            android:textSize="24sp" />
     </RadioGroup>
 
     <Button
@@ -66,7 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="160dp"
+        android:onClick="calcular"
         android:text="@string/bt_calcular"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
